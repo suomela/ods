@@ -1,19 +1,7 @@
-The following  two directories contain code from Sun Microsystems and
-the Apache Foundation:
-
-java/test/acc/
-java/test/jdk/
-
-
-Consult the file headers of the files in these directories for information
-about their copyright status.
-
-----
 The following directories contain code created for the Open Data
 Structures project. 
 
 latex/
-java/ods/
 
 This code is released under a Creative Commons Attribution license.
 The full text of the license is available here.
