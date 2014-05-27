@@ -266,7 +266,7 @@ def print_code(clazz, methods):
     print r'\begin{flushleft}'
     printed = False
     try:
-        filename = "../python/ods/" + clazz.lower() + ".py"
+        filename = clazz + ".py"
         code = open(filename).read().splitlines()
         printing = False
         for line in code:
@@ -318,7 +318,7 @@ def snarf(infile):
         elif line.startswith('\\codeimport') \
                 or line.startswith(r'\pcodeimport'):
             print "%%importing %s: " % line
-            m = re.search(r'\{\w+/(\w+)(.*)\}', line)
+            m = re.search(r'\{(\w+)(.*)\}', line)
             clazz = m.group(1)
             methods = m.group(2).lstrip('.').split('.')
             if [m for m in methods if re.match(r'^\w+$', m)]:
